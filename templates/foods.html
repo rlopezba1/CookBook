@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Manager</title>
+</head>
+<body>
+    {% for food in foods %}
+        {{ food.food_name }} <br>
+        {{ food.category_name }} <br>
+        {{ food.food_description }} <br>
+        {{ food.food_ingredients }} <br>
+        {{ food.food_preparation }} <br>
+        {{ food.food_tools }} <br>
+        {{ food.food_cuisine}} <br>
+    {% endfor %}
+    
+</body>
+</html>
