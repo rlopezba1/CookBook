@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Manager</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>I'm extending the base template</h2>
+
     {% for food in foods %}
         {{ food.food_name }} <br>
         {{ food.category_name }} <br>
@@ -15,6 +12,6 @@
         {{ food.food_tools }} <br>
         {{ food.food_cuisine}} <br>
     {% endfor %}
+
+{% endblock %}
     
-</body>
-</html>
