@@ -1,29 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for food in foods %}
-        {{ food.food_name }} <br>
-        {{ food.category_name }} <br>
-        {{ food.food_description }} <br>
-        {{ food.food_ingredients }} <br>
-        {{ food.food_preparation }} <br>
-        {{ food.food_tools }} <br>
-        {{ food.food_cuisine}} <br>
-    {% endfor %}
+ 
+    
 
       <ul class="collapsible">
+          {% for food in foods %}
           <li>
-              <div class="collapsible-header"><i class="fas fa-caret-down"></i>First</div>
-              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-          </li>
-          <li>
-              <div class="collapsible-header"><i class="fas fa-caret-down"></i>Second</div>
-              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-          </li>
-          <li>
-              <div class="collapsible-header"><i class="fas fa-caret-down"></i>Third</div>
-              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-          </li>
+              <div class="collapsible-header">
+                  <i class="fas fa-caret-down"></i>
+                  <strong>{{ food.food_name }}</strong> : {{ food.food_description }}
+              </div>
+              <div class="collapsible-body">
+                  <strong>{{ food.category_name }}</strong>
+                  <p>{{ food.food_ingredients }}</p>
+              </div>
+          </li>      
+           {% endfor %}    
       </ul>
 
 {% endblock %}
