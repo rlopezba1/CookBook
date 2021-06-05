@@ -10,9 +10,13 @@
                 <div class="input-field col s12">
                     <i class="fas fa-folder-open prefix"></i>
                     <select id="category_name" name="category_name" class="validate" required>
-                        <option value="" disabled selected>Choose Category</option>
+                        <option value="" disabled >Choose Category</option>
                         {% for category in categories %}
-                            <option value="{{ category.category_name }} ">{{ category.category_name }}</option>        
+                            {% if category.category_name == food.category_name%}                            
+                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>       
+                            {% else %}
+                               <option value="{{ category.category_name }} ">{{ category.category_name }}</option>      
+                            {% endif %}  
                         {% endfor %}                
                     </select>
                     <label for="category_name">Recipe Category</label>
@@ -23,7 +27,7 @@
                  <div class="input-field col s12">
                      <i class="fas fa-user-circle prefix"></i>
                      <input id="food_name" name="food_name" minlength="5" maxlength="50"
-                         type="text" class="validate" required>
+                         value="{{ food.food_name }}" type="text" class="validate" required>
                      <label for="food_name">Recipe Name</label>
                  </div>
              </div>
@@ -32,13 +36,17 @@
                  <div class="input-field col s12">
                      <i class="fas fa-align-left prefix"></i>
                      <textarea id="food_description" name="food_description" minlength="5"
-                         maxlength="200" class="materialize-textarea validate" required></textarea>
+                         maxlength="200" class="materialize-textarea validate" required>{{ food.food_description }}</textarea>
                      <label for="food_description">Recipe Description</label>
                  </div>
              </div>
              <!-- Submit button-->
              <div class="row">
                  <div class="col s12 center-align">
+                     <!-- cancel button -->
+                     <a href="{{ url_for('get_foods') }}" class="btn red text-shadow">
+                         Cancel <i class="fas fa-times-circle right"></i>
+                     </a>
                      <button class="btn waves-effect waves-light" type="submit" >Edit Recipe
                         <i class="fas fa-edit right"></i>
                     </button>
