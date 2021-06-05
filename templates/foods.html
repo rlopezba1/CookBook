@@ -8,8 +8,14 @@
           {% for food in foods %}
           <li>
               <div class="collapsible-header">
-                  <i class="fas fa-caret-down"></i>
-                  <strong>{{ food.food_name }}</strong> : {{ food.food_description }}
+                  <div class="col s3">
+                      <i class="fas fa-caret-down"></i>
+                      <a class="waves-effect waves-light btn-small">Done</a>
+                      <a class="waves-effect waves-light btn-small">Edit</a>
+                  </div>
+                  <div class="col s9">
+                      <strong>{{ food.food_name }}</strong> : {{ food.food_description }}
+                  </div>
               </div>
               <div class="collapsible-body">
                   <strong>{{ food.category_name }}</strong>
