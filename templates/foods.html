@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
- 
+     <h3 class="light-blue-text center-align">All Recipes</h3>
     
 
       <ul class="collapsible">
@@ -14,6 +14,7 @@
               <div class="collapsible-body">
                   <strong>{{ food.category_name }}</strong>
                   <p>{{ food.food_ingredients }}</p>
+                  <p><em>by: {{ food.created_by }}</em></p>
               </div>
           </li>      
            {% endfor %}    
