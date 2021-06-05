@@ -112,6 +112,12 @@ def add_food():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_food.html", categories=categories)
 
+@app.route("/edit_food/<food_id>", methods=["GET","POST"])
+def edit_food(food_id):
+    food = mongo.db.foods.find_one({"_id": ObjectId(food_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_food.html", food=food, categories=categories)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
