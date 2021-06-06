@@ -10,9 +10,11 @@
               <div class="collapsible-header">
                   <div class="col s3">
                       <i class="fas fa-caret-down"></i>
-                      <a href="" class="waves-effect waves-light btn-small">Done</a>
-                      <a href="{{ url_for('edit_food', food_id=food._id) }}" class="waves-effect waves-light btn-small">Edit</a>
-                  </div>
+                      {% if session.user|lower == food.created_by|lower %}
+                        <a href="" class="waves-effect waves-light btn-small">Done</a>
+                        <a href="{{ url_for('edit_food', food_id=food._id) }}" class="waves-effect waves-light btn-small">Edit</a>
+                      {% endif %}
+                    </div>
                   <div class="col s9">
                       <strong>{{ food.food_name }}</strong> : {{ food.food_description }}
                   </div>
