@@ -25,6 +25,12 @@ def get_foods():
     return render_template("foods.html", foods=foods)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    foods = list(mongo.db.foods.find({"$text": {"$search": query}}))
+    return render_template("foods.html", foods=foods)
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
