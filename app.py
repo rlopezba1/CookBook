@@ -109,6 +109,8 @@ def add_food():
             "category_name": request.form.get("category_name"),
             "food_name": request.form.get("food_name"),
             "food_description": request.form.get("task_description"),
+            "recipe_image": request.form.get("recipe_image"),
+             "food_ingredients": request.form.get("food_ingredients"),
             "created_by": session["user"]
         }
         mongo.db.foods.insert_one(food)
@@ -126,6 +128,8 @@ def edit_food(food_id):
             "category_name": request.form.get("category_name"),
             "food_name": request.form.get("food_name"),
             "food_description": request.form.get("food_description"),
+            "recipe_image": request.form.get("recipe_image"),
+            "food_ingredients": request.form.get("food_ingredients"),
             "created_by": session["user"]
         }
         mongo.db.foods.update({"_id": ObjectId(food_id)}, submit)
