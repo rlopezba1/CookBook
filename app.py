@@ -108,9 +108,10 @@ def add_food():
         food = {
             "category_name": request.form.get("category_name"),
             "food_name": request.form.get("food_name"),
-            "food_description": request.form.get("task_description"),
-            "recipe_image": request.form.get("recipe_image"),
-             "food_ingredients": request.form.get("food_ingredients"),
+            "food_description": request.form.get("food_description"),
+            "food_image": request.form.get("food_image"),
+            "food_ingredients": request.form.get("food_ingredients"),
+            "food_preparation": request.form.get("food_preparation"),
             "created_by": session["user"]
         }
         mongo.db.foods.insert_one(food)
@@ -120,7 +121,7 @@ def add_food():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_food.html", categories=categories)
 
-@app.route("/edit_food/<food_id>", methods=["GET","POST"])
+@app.route("/edit_food/<food_id>", methods=["GET", "POST"])
 def edit_food(food_id):
     
     if request.method == "POST":
@@ -128,8 +129,9 @@ def edit_food(food_id):
             "category_name": request.form.get("category_name"),
             "food_name": request.form.get("food_name"),
             "food_description": request.form.get("food_description"),
-            "recipe_image": request.form.get("recipe_image"),
+            "food_image": request.form.get("food_image"),
             "food_ingredients": request.form.get("food_ingredients"),
+            "food_preparation": request.form.get("food_preparation"),
             "created_by": session["user"]
         }
         mongo.db.foods.update({"_id": ObjectId(food_id)}, submit)

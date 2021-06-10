@@ -36,7 +36,9 @@
                  <div class="input-field col s12">
                      <i class="fas fa-align-left prefix"></i>
                      <textarea id="food_description" name="food_description" minlength="5"
-                         maxlength="200" class="materialize-textarea validate" required>{{ food.food_description }}</textarea>
+                         maxlength="200" class="materialize-textarea validate" required>
+                        {{- food_description -}}
+                        </textarea>
                      <label for="food_description">Recipe Description</label>
                  </div>
              </div>
@@ -44,9 +46,9 @@
               <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-camera prefix form-recipe-icon-margin-1"></i>
-                    <label for="recipe_image">Image URL</label>
-                    <input type="text" class="form-control validate" name="recipe_image" 
-                        id="recipe_image" aria-describedby="recipe_image" required>
+                    <label for="food_image">Image URL</label>
+                    <input type="text" class="form-control validate" value="{{ food.food_image }}"name="food_image" 
+                        id="food_image" aria-describedby="food_image" required> 
                 </div>
               </div>
             <!-- Ingredients-->
@@ -54,7 +56,9 @@
                  <div class="input-field col s12">
                      <i class="fas fa-align-left prefix"></i>
                      <textarea id="food_ingredients" name="food_ingredients" minlength="5"
-                         maxlength="200" class="materialize-textarea validate" required></textarea>
+                         maxlength="200" class="materialize-textarea validate" required>
+                        {{- food.food_ingredients -}}
+                        </textarea>
                      <label for="food_ingredients">Ingredients</label>
                  </div>
              </div>
@@ -64,7 +68,9 @@
                  <div class="input-field col s12">
                      <i class="fas fa-align-left prefix"></i>
                      <textarea id="food_preparation" name="food_preparation" minlength="5"
-                         maxlength="200" class="materialize-textarea validate" required></textarea>
+                         maxlength="200" class="materialize-textarea validate" required>
+                        {{- food.food_preparation -}}
+                        </textarea>
                      <label for="food_preparation">Preparation</label>
                  </div>
              </div>
