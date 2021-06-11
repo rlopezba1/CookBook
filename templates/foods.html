@@ -60,11 +60,11 @@
                 <strong>Category: {{ food.category_name }} </strong>
                 {% if session.user|lower == food.created_by|lower %} <br>
                <!-- <a href="{{ url_for('delete_food', food_id=food._id) }}" class="waves-effect waves-light btn-small">Done</a>-->
-               <button data-target=" {{ url_for('delete_food', food_id=food._id) }} " class="btn modal-trigger">Delete</button>
+               <button data-target=" modal-{{ food._id }}"  class="btn modal-trigger">Delete</button>
                 <button data-target=" {{ url_for('edit_food', food_id=food._id) }} " class="btn modal-trigger">Edit</button>           
                
                  <!-- Modal Structure -->
-                <div id=" {{ url_for('delete_food', food_id=food._id) }}" class="modal">
+                <div id=" modal-{{ food._id }}" class="modal">
                     <div class="modal-content">
                         <h4>Delete Recipe</h4>
                         <p>Are you sure that you want to delete the recipe?</p>
@@ -83,12 +83,9 @@
                     <div class="modal-footer">                   
                         <a href="{{ url_for('edit_food', food_id=food._id) }}">Agree</a>                 
                     </div>
-                </div> 
+                </div>              
                 
-                
-                {% endif %}
-
-                
+                {% endif %}                
                 
             </div>
             <div class="card-action">
