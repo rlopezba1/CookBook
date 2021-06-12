@@ -1,16 +1,17 @@
 {% extends "base.html"%}
 {% block content %}
-
-
-
 <div class="row">
-    <div class="col s12 m8 offset-m2">
-        <div class="card-panel">
-            <h3 class="center-align light-blue-text text-darken-4">  
-                {{ username }}'s Profile</h3> 
+    <div class="col">
+        <div class="card_profile">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.freepik.com%2Fvector-gratis%2Fchef-joven-pareja-avatares-personajes_24640-47795.jpg%3Fsize%3D338%26ext%3Djpg&f=1&nofb=1"
+                alt="Cook" style="width:100%">
+            <h1> {{ username }}'s Profile</h1>
+            <p class="price">$19.99</p>
+            <p>Some text about the jeans..</p>
+            <p><button>Add to Cart</button></p>
         </div>
     </div>
+   
 </div>
-
 
 {% endblock %}
