@@ -25,11 +25,13 @@ def get_foods():
     return render_template("foods.html", foods=foods)
 
 
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
     foods = list(mongo.db.foods.find({"$text": {"$search": query}}))
     return render_template("foods.html", foods=foods)
+
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -186,6 +188,19 @@ def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted ")
     return redirect(url_for("get_categories"))
+
+
+@app.route("/recipe/<food_id>")
+def recipe(food_id):
+
+    """
+    Renders the recipe page that the user wants to see through
+    the ObjectId.
+    """
+
+    food = mongo.db.foods.find_one({"_id": ObjectId(food_id)})
+    print(food)
+    return render_template("recipe.html", food=food)
 
 
 if __name__ == "__main__":
