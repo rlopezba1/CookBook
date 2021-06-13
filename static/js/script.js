@@ -34,3 +34,5 @@ $(document).ready(function(){
         });
     }
 });
+
+document.getElementById("visited").innerHTML = document.lastModified;

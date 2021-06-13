@@ -25,7 +25,6 @@ def get_foods():
     return render_template("foods.html", foods=foods)
 
 
-
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -201,6 +200,11 @@ def recipe(food_id):
     food = mongo.db.foods.find_one({"_id": ObjectId(food_id)})
     print(food)
     return render_template("recipe.html", food=food)
+
+
+@app.route("/products")
+def products():    
+    return render_template("products.html")
 
 
 if __name__ == "__main__":
