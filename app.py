@@ -207,6 +207,11 @@ def products():
     return render_template("products.html")
 
 
+@app.route("/home")
+def home():    
+    return render_template("index.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

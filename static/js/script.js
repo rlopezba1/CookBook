@@ -3,6 +3,7 @@ $(document).ready(function(){
     $('.collapsible').collapsible();
     $('select').formSelect();
     $('.modal').modal();
+    $('.parallax').parallax();
 
  
 
@@ -35,4 +36,5 @@ $(document).ready(function(){
     }
 });
 
-document.getElementById("visited").innerHTML = document.lastModified;
+
+

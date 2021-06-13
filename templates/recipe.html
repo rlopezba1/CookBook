@@ -26,10 +26,7 @@
                <i class="fas fa-user-alt"></i> Created By: <strong>{{ food.created_by.title() }}</strong>
             </p>
          </div>
-         <div>
-             <p>This recipe was last visited <span id="visited"></span>.</p>
-         </div>
-
+       
          <!-- Biased btns, they appear if the Admin is Logged in or the User Who created the Recipe -->
          <div class="card-action recipe-btns">
             {% if session.user == 'admin' or session.user|lower == food.created_by|lower %}
