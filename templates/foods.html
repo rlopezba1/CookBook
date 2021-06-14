@@ -11,7 +11,7 @@
                 <input type="text" name="query" id="query" minlength="3" class="validate" required>
                 <label for="query">Search Recipe</label>
             </div>
-            <div class="col s12 m4">
+            <div class="col s12 m4 ">
                 <a href="{{ url_for('get_foods') }}" class="red accent-4 btn text-shadow">Reset</a>
                 <button type="submit" class="black btn text-shadow">
                     <i class="fas fa-search left"></i>Search
@@ -25,7 +25,7 @@
 {% if foods|length > 0 %}
     <div class="row center-align">
 {% for food in foods %}
-        <div class="col s12 m3 l3">
+        <div class="col s12 m4 l4">
             <div class="card medium">
                 <div class="card-image"  style="height: 300px" style="width: 300px">
                     <img src="{{ food.food_image }}">
