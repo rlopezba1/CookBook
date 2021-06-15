@@ -2,7 +2,7 @@
 
 ## Code Institute: Milestone Project 3
 
-![The Cook Book Responsive Design](responsive_img.png)
+![The Cook Book Responsive Design](https://github.com/rlopezba1/cook_book/blob/master/static/img/responsive_img.png)
 
 *The Cook Book* is an online cookbook that helps people share recipes, create, edit or delete recipes. My goal with this project was to create an intuitive website, useful for people looking for cooking ideas and people who want to share their knowledge.
 
