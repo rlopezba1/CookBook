@@ -178,6 +178,14 @@ def delete_food(food_id):
     return redirect(url_for("get_foods"))
 
 
+# @app.route("/delete_profile/<users_id>")
+# def delete_profile(users_id):
+   #  mongo.db.users.remove({"_id": ObjectId(users_id)})
+    # flash("Profile Successfully Deleted")
+    # return redirect(url_for("get_foods"))
+
+
+
 @app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))

@@ -31,7 +31,7 @@
          <div class="card-action recipe-btns">
             {% if session.user == 'admin' or session.user|lower == food.created_by|lower %}
             <a href="{{ url_for('edit_food', food_id=food._id) }}" class="btn">Edit</a>
-            <a href="#modal-question" class="modal-trigger btn del">Delete</a>
+            <a href="#modal-question" class="modal-trigger btn red del">Delete</a>
             <div class="modal" id="modal-question">
                <div class="modal-content">
                   <h4 class="page-indicator">Delete this Recipe?</h4>
@@ -39,17 +39,18 @@
                </div>
                <div class="modal-footer">
                   <a href="{{ url_for('delete_food', food_id=food._id) }}"
-                     class="btn-small modal-close del">
+                     class="btn-small modal-close red del">
                   Delete</a>
                   <a class="btn-small modal-close back">Go Back</a>
                </div>
             </div>
             {% endif %}
-            <a href="{{ url_for('get_foods') }}" class=" btn">Back to Recipes</a>
+            <a href="{{ url_for('get_foods') }}" class=" btn black">Back to Recipes</a>
          </div>
       </div>
    </div>
 </div>
+
 
 <!-- Description Section -->
 <div class="row ">

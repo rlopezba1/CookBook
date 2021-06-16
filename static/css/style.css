@@ -44,11 +44,15 @@ body {
 }
 
 
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-.reduce{
-    height: 20%;
+.brand-logo{
+    margin-left: 20%;
+    width: 100%;
 }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
