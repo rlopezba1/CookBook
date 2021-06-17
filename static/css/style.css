@@ -45,15 +45,25 @@ body {
 
 
 
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 .brand-logo{
-    margin-left: 40%;
     width: 100%;
+    margin-left: 20px;
+    }
 }
 
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+nav .nav-wrapper {
+    padding-left: 50px;
 }
+}
+
+
 
  
 /* Button to top */
