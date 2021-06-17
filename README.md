@@ -223,4 +223,4 @@ The Images are referenced below
 ## Acknowledgements
 
 - My mentor Seun Owonikoko for her support
-- Code Institute tutors for the advices, guidance and support
+- Code Institute tutors for the advices, guidance and support, and Student Nicola to some ideas
