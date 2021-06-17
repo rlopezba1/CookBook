@@ -82,6 +82,10 @@ I am a cooking and food lover. I like to cook and I always look for recipes on t
 
 ### Existing Features
 
+#### Wireframes
+
+![wireframes](https://github.com/rlopezba1/cook_book/blob/master/static/documentation/cook_book.pdf)
+
 #### Database structure
 
 MongoDB database has been chosen for the project and locates the 3 collections
