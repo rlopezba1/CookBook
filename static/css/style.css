@@ -49,7 +49,7 @@ body {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 .brand-logo{
-    margin-left: 20%;
+    margin-left: 40%;
     width: 100%;
 }
 
