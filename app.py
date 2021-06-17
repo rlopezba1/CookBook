@@ -57,31 +57,6 @@ def register():
     return render_template("register.html")
 
 
-@app.route("/newusername", methods=["GET", "POST"])
-def newusername():
-    if request.method == "POST":
-        # check if username already exists in db
-        existing_user = mongo.db.users.find_one(
-            {"newusername": request.form.get("newusername").lower()})
-
-        if existing_user:
-            flash("Username already exists")
-            return redirect(url_for("profile"))
-
-        newusername = {
-            "newusername": request.form.get("newusername").lower(),
-            "password": generate_password_hash(request.form.get("newpassword"))
-        }    
-        mongo.db.users.insert_one(newusername)
-
-        # put the new user into 'session' cookie
-        session["user"] = request.form.get("newusername").lower()
-        flash("Registration Successful!")
-        return redirect(url_for("profile", username=session["user"]))
-
-    return render_template("profile.html")
-
-
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
