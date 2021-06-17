@@ -195,6 +195,20 @@ MongoDB database has been chosen for the project and locates the 3 collections
 
 ## Testing
 
+- Validating HTML, CSS, JavaScript and Python
+- Checking responsiveness of design on all screen sizes
+- Manually testing the functionality of all links
+
+["Validating HTML"] (https://github.com/rlopezba1/cook_book/blob/master/static/img/pexels-elle-hughes-2696064.jpg)
+["Validating CSS"] (https://github.com/rlopezba1/cook_book/blob/master/static/img/pexels-elle-hughes-2696064.jpg)
+["Validating JS"] (https://github.com/rlopezba1/cook_book/blob/master/static/img/pexels-elle-hughes-2696064.jpg)
+
+
+In the case of html, the errors are given by the loops and blocks of jinja
+
+I manually tested the project on the following web browsers, checking that all aspects worked as planned:
+- Google Chrome 
+- Mozilla Firefox 
 
 
 ## Deployment
