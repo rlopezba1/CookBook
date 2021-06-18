@@ -203,9 +203,9 @@ MongoDB database has been chosen for the project and locates the 3 collections
 - Checking responsiveness of design on all screen sizes
 - Manually testing the functionality of all links
 
-["Validating HTML"] (https://github.com/rlopezba1/cook_book/blob/master/static/img/html_testing.png)
-["Validating CSS"] (https://github.com/rlopezba1/cook_book/blob/master/static/img/css_validation.png)
-["Validating JS"] (https://github.com/rlopezba1/cook_book/blob/master/static/img/js_validation.png)
+- ["Validating HTML"] (https://github.com/rlopezba1/cook_book/blob/master/static/img/html_testing.png)
+- ["Validating CSS"] (https://github.com/rlopezba1/cook_book/blob/master/static/img/css_validation.png)
+- ["Validating JS"] (https://github.com/rlopezba1/cook_book/blob/master/static/img/js_validation.png)
 
 
 In the case of html, the errors are given by the loops and blocks of jinja

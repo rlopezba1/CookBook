@@ -43,6 +43,11 @@ body {
     margin-bottom: 15px;
 }
 
+#search-button {
+    margin-bottom: 0;
+}
+
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -50,10 +55,12 @@ body {
     width: 100%;
     margin-left: 20px;
     }
-}
+
 
 #search-button {
     margin-bottom: 20px;
+}
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
